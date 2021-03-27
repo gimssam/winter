@@ -1,136 +1,134 @@
 <!DOCTYPE html>
-<!--IE이전 버전 한글 사용-->
-<!--[if IE 7]><html class="no-js old ie7 lang="ko"><![endif]-->
-<!--[if IE 8]><html class="no-js old ie8 lang="ko"><![endif]-->
-<!--[if IE 9]><html class="no-js old ie9 lang="ko"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리">
-    <meta name="description" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리">
+    <meta name="keywords" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,웹퍼블리셔,html5,css3,자바스크립트,제이쿼리,리액트">
+    <meta name="description" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,웹퍼블리셔,html5,css3,자바스크립트,제이쿼리,리액트">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/notosans_kr_CDN.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="shortcut icon" href="#">
     <link rel="apple-touch-icon-precomposed" href="#">
-    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/respond.src.js"></script><![endif]-->
-    <!--[if lt IE 10]><script src="js/PIE.js"></script><![endif]-->
-    <title>스팅어</title>
-<!--제이쿼리 코어 플러그인-->
+    
+<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.src.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/PIE.js"></script><![endif]-->
+    <title>FROZEN</title>
+    <!--기본 CSS-->
+    <link rel="stylesheet" href="css/frozen.css">
+    <!--dots CSS-->
+    <link rel="stylesheet" href="css/dots.css">
+    
+    
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!--커스텀 CSS-->
-    <link rel="stylesheet" href="css/daewoo.css">
+    <script src="js/wheel_event.js"></script>
 </head>
 <body>
-    <div id="wrap">
-        <header class="header">
-            <figure>
-                <video autoplay loop class="video">
-                    <source src="images/stinger.mp4" type="video/mp4">
-                </video>
-                <button id="car_btn">
-                    <i class="fa fa-pause-circle-o" aria-hidden="true"></i>
-                </button>
-                <button id="car_sound">
-                    <i class="fa fa-volume-off" aria-hidden="true"></i>
-<!--                    <i class="fa fa-volume-up" aria-hidden="true"></i>-->
-                </button>
-            </figure>
-            <div class="header_wrap">
-                <div class="header_gnb">
-                    <h1>대우건설</h1>
-                    <nav class="gnb_wrap">
-                        <ul class="gnb">
-                            <li><a href="#">회사소개</a></li>
-                            <li><a href="#">사업분야</a></li>
-                            <li><a href="#">홍보센터</a></li>
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">추가깃bbbbbbb</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="snb_wrap">
-                        <ul class="snb">
-                            <li><a href="#">뉴스룸</a></li>
-                            <li><a href="#">투자정보</a></li>
-                            <li><a href="#">채용</a></li>
-                            <li><a href="#">ENG</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="video_text">
-                <h2>
-                    BUILD <br>
-                    TOGETHER
-                </h2>
-                <p>
-                    고객과 함께 최고의 가치를 실현하는 기업
-                </p>
-            </div>
-        </header>
-    <footer class="footer">
-        <h3>대우건설</h3>
+<!--   GNB메뉴 / SNS 영역 시작-->
+    <header>
+        <h1>
+            <a href="#"><img src="images/logo.png" alt="스워치로고"></a>
+        </h1>
         <nav>
-            <ul class="fnb">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">사이트맵</a></li>
-                <li><a href="#">사이버감사실</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">이메일수집거부</a></li>
+            <ul id="menu">
+               <!--1. 인라인 이벤트-->
+                <!--<li><a href="#con0" onClick="move(0);">ELSA</a></li>
+                <li><a href="#con1" onClick="move(1);">ANNA</a></li>
+                <li><a href="#con2" onClick="move(2);">KRISTOFF</a></li>
+                <li><a href="#con3" onClick="move(3);">OLAF &amp; SVEN</a></li>-->
+                
+                <li><a href="#con0">ELSA</a></li>
+                <li><a href="#con1">ANNA</a></li>
+                <li><a href="#con2">KRISTOFF</a></li>
+                <li><a href="#con3">OLAF &amp; SVEN</a></li>                
+                <li><a href="#con3">OLAF &amp; SVEN 추가aaaa</a></li>                
             </ul>
         </nav>
-        <ul class="sns">
-            <li><a href="#">페이스북</a></li>
-            <li><a href="#">인스타그램</a></li>
-            <li><a href="#">트위터</a></li>
+        <ul id="sns">
+            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
         </ul>
-    </footer>
-    </div>
+    </header>
+<!--   GNB메뉴 / SNS 영역 끝-->
+<!--    본문 내용 영역 시작-->
+    <section>
+<!--       본문내용1 시작-->
+        <article id="con0" class="wheel_content">
+            <h2>
+                ELSA
+            </h2>
+            <span>
+                " I'm gonna stand up like the sun is up." <br>
+                " 해가 뜨는 것처럼 나는 일어설거야. "
+            </span>
+            <img src="images/1_elsa_deco.png" alt="엘사데코이미지" class="elsa_deco">
+        </article>
+<!--       본문내용1 끝-->
+
+<!--       본문내용2 시작-->
+        <article id="con1" class="wheel_content">
+            <h2>
+                ANNA
+            </h2>
+            <span>
+                " Some things never change, Like how I'm holding on tight you. " <br>
+                " 어떤 것들은 변하지 않아. 내가 널 꽉 잡고 있는 것처럼. " 
+            </span>
+            <img src="images/2_anna_deco.png" alt="안나데코이미지" class="anna_deco">
+        </article>
+<!--       본문내용2 끝-->
+  
+<!--       본문내용3 시작-->
+        <article id="con2" class="wheel_content">
+            <h2>
+                KRISTOFF
+            </h2>
+            <span>
+                " My love is not fragile! "<br> 
+                " 나의 사랑은 연약하지 않아! "
+            </span>
+            <img src="images/3_kristoff_deco.png" alt="크리스토프데코이미지" class="kristoff_deco">
+        </article>
+<!--       본문내용3 끝-->
+  
+<!--       본문내용4 시작-->
+        <article id="con3" class="wheel_content">
+            <h2>
+                OLAF &amp; SVEN
+            </h2>
+            <span>
+                " I just thought of one thing that's permanent. Love! " <br>
+                " 변하지 않는게 하나 있어요. 사랑! "
+            </span>
+            <img src="images/4_olaf,sven_deco.png" alt="올라프스벤데코이미지" class="olafsven_deco">
+        </article>
+<!--       본문내용4 끝-->
+    </section>
+<!--    본문 내용 영역 끝-->
+   
+    <!--도트영역 시작-->
+    <ul class="dots dots-right">
+        <li onClick="dotTab(0);"><a href="#"></a></li>
+        <li onClick="dotTab(1);"><a href="#"></a></li>
+        <li onClick="dotTab(2);"><a href="#"></a></li>
+        <li onClick="dotTab(3);"><a href="#"></a></li>
+    </ul>
+    <!--도트영역 끝-->
 </body>
 </html>
-<script>
-    var wd = $('html,body').innerWidth();
-    var ht = $('html,body').innerHeight();
-</script>
-<script>
-    /*비디오 플레이 스톱 제어*/
-    var video = $('.video');
-    var btn = $('#car_btn');
-    $('#car_btn').click(function(){
-        if(video.get(0).paused){
-            video.get(0).play();
-            btn.html('<i class="fa fa-pause-circle-o" aria-hidden="true"></i>');
-        }else{
-            video.get(0).pause();
-            btn.html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>');
-        }
-    });
-    
-    /*사운드 제어 html 속성값 muted를 삭제한후 제이쿼리에서 동적으로 넣어줘야 함*/
-    video.prop('muted',true); // muted가 true니까 = muted적용
-    var btn2 = $('#car_sound');
-    $('#car_sound').click(function(){
-        //muted 상태일때 클릭하면
-        if(video.prop('muted')){
-            video.prop('muted',false); // 음악 나옴
-            btn2.html('<i class="fa fa-volume-up" aria-hidden="true"></i>');
-        }else{
-            video.prop('muted',true);
-            btn2.html('<i class="fa fa-volume-off" aria-hidden="true"></i>');
-        }
-    });
-</script>
-
-
+<script src="js/frozen.js"></script>
+<script src="js/dot.js"></script>
 
 
 
