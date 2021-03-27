@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--IE이전 버전 한글 사용-->
+<!--[if IE 7]><html class="no-js old ie7 lang="ko"><![endif]-->
+<!--[if IE 8]><html class="no-js old ie8 lang="ko"><![endif]-->
+<!--[if IE 9]><html class="no-js old ie9 lang="ko"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리">
+    <meta name="description" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="#">
+    <link rel="apple-touch-icon-precomposed" href="#">
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.src.js"></script><![endif]-->
+    <!--[if lt IE 10]><script src="js/PIE.js"></script><![endif]-->
+    <title>스팅어</title>
+<!--제이쿼리 코어 플러그인-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--커스텀 CSS-->
+    <link rel="stylesheet" href="css/daewoo.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <figure>
+                <video autoplay loop class="video">
+                    <source src="images/stinger.mp4" type="video/mp4">
+                </video>
+                <button id="car_btn">
+                    <i class="fa fa-pause-circle-o" aria-hidden="true"></i>
+                </button>
+                <button id="car_sound">
+                    <i class="fa fa-volume-off" aria-hidden="true"></i>
+<!--                    <i class="fa fa-volume-up" aria-hidden="true"></i>-->
+                </button>
+            </figure>
+            <div class="header_wrap">
+                <div class="header_gnb">
+                    <h1>대우건설</h1>
+                    <nav class="gnb_wrap">
+                        <ul class="gnb">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">사업분야</a></li>
+                            <li><a href="#">홍보센터</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">추가깃bbbbbbb</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="snb_wrap">
+                        <ul class="snb">
+                            <li><a href="#">뉴스룸</a></li>
+                            <li><a href="#">투자정보</a></li>
+                            <li><a href="#">채용</a></li>
+                            <li><a href="#">ENG</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="video_text">
+                <h2>
+                    BUILD <br>
+                    TOGETHER
+                </h2>
+                <p>
+                    고객과 함께 최고의 가치를 실현하는 기업
+                </p>
+            </div>
+        </header>
+    <footer class="footer">
+        <h3>대우건설</h3>
+        <nav>
+            <ul class="fnb">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">사이버감사실</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이메일수집거부</a></li>
+            </ul>
+        </nav>
+        <ul class="sns">
+            <li><a href="#">페이스북</a></li>
+            <li><a href="#">인스타그램</a></li>
+            <li><a href="#">트위터</a></li>
+        </ul>
+    </footer>
+    </div>
+</body>
+</html>
+<script>
+    var wd = $('html,body').innerWidth();
+    var ht = $('html,body').innerHeight();
+</script>
+<script>
+    /*비디오 플레이 스톱 제어*/
+    var video = $('.video');
+    var btn = $('#car_btn');
+    $('#car_btn').click(function(){
+        if(video.get(0).paused){
+            video.get(0).play();
+            btn.html('<i class="fa fa-pause-circle-o" aria-hidden="true"></i>');
+        }else{
+            video.get(0).pause();
+            btn.html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>');
+        }
+    });
+    
+    /*사운드 제어 html 속성값 muted를 삭제한후 제이쿼리에서 동적으로 넣어줘야 함*/
+    video.prop('muted',true); // muted가 true니까 = muted적용
+    var btn2 = $('#car_sound');
+    $('#car_sound').click(function(){
+        //muted 상태일때 클릭하면
+        if(video.prop('muted')){
+            video.prop('muted',false); // 음악 나옴
+            btn2.html('<i class="fa fa-volume-up" aria-hidden="true"></i>');
+        }else{
+            video.prop('muted',true);
+            btn2.html('<i class="fa fa-volume-off" aria-hidden="true"></i>');
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
